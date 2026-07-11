@@ -1,0 +1,34 @@
+{
+    "version": "1.0",
+    "description": "审议者规则库 — MVP 阶段手动维护，meta_training 时增量更新",
+    "rules": [
+        {
+            "id": "rtfm_stfw",
+            "name": "RTFM/STFW 检测",
+            "description": "检测用户需求是否属于「帮我读文档/帮我搜索」类型，此类需求应标注为无效",
+            "check_prompt": "用户是否要求代为阅读外部文档或搜索引擎查询？若是则标记 invalid。",
+            "severity": "critical"
+        },
+        {
+            "id": "mvp_only",
+            "name": "MVP 原则检查",
+            "description": "实干家输出是否引入了过度工程？是否偏离了最小可行方案？",
+            "check_prompt": "检查执行结果是否包含了需求范围外的额外功能、过度的抽象层、不必要的配置文件等。",
+            "severity": "high"
+        },
+        {
+            "id": "scope_creep",
+            "name": "范围蔓延检测",
+            "description": "执行结果是否覆盖了比原始需求更多的范围？",
+            "check_prompt": "对比原始需求和执行结果，是否有明显超出需求边界的内容？",
+            "severity": "medium"
+        },
+        {
+            "id": "no_reflexivity_in_executor",
+            "name": "实干家无反思维度",
+            "description": "实干家不应进行自我反思、自我评估或给出「我认为/我觉得」类表述",
+            "check_prompt": "检查输出中是否包含「我认为」「我觉得」「我建议」「在我看来」等反思性语言。",
+            "severity": "medium"
+        }
+    ]
+}

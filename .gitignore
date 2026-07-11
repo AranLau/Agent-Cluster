@@ -1,0 +1,32 @@
+# ── Push Rules ──
+# init:   brief file inventory — what's included
+# update: feat/fix/chore — what changed
+# author: AranLau
+#
+# 敏感配置
+.env
+
+# 测试文件
+tests/
+.pytest_cache/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 运行时产物
+task/
+agent_cluster/archive/
+
+# IDE
+.vscode/settings.json
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 虚拟环境
+.venv/
